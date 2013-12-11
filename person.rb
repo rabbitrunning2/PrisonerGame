@@ -4,11 +4,7 @@ class Person < Character
 
 	def initialize()
 		@answer = true
-# 		@name
-# 		@strength
-# 		@dexterity
-# 		@constitution
-# 		@hit_points
+		
 		while (@answer == true) do
 			create_character()
 			keep_character()
@@ -21,13 +17,20 @@ class Person < Character
 	end
 	
 	def create_character()
-		prompt
-		@name = gets.chomp
-		@strength = Random.new.rand(5..18)
-		@dexterity = Random.new.rand(5..18)
-		@constitution = Random.new.rand(5..18)
-		@hit_points = @constitution * Random.new.rand(2..5)
-		print_attributes()
+		if @name == nil
+			prompt
+			name = gets.chomp
+			set_name(name.capitalize)
+			set_stats(5,18)
+			set_hit_points(2,5)
+			print_attributes()
+		elsif @name != nil
+			set_stats(5,18)
+			set_hit_points(2,5)
+			print_attributes()
+		else
+			raise "Something went wrong here!"
+		end
 	end
 	
 	def keep_character
@@ -47,11 +50,6 @@ class Person < Character
 		print "Enter a name: "
 	end
 	
-	def get_hit_points
-		@hit_points
-	end
-	
-	def set_hit_points(hp)
-		@hit_points = hp
-	end
 end
+
+Person.new
