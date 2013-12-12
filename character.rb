@@ -8,7 +8,7 @@ class Character
 	
 	def initialize()
 		super()
-		@inventory = Hash.new
+		@inventory = Array.new
 		
 	end
 	
@@ -62,6 +62,9 @@ class Character
 		else
 			raise "No value for consitution to compute hit points!"
 		end
+	end
+	def add_item(item)
+		@inventory.push(item)
 	end
 	
 	def set_stats(low_number, high_number)
