@@ -22,4 +22,7 @@ class Room
 		puts description
 	end
 	
+	def help_request(help_message)
+		puts help_message
+	end
 end
