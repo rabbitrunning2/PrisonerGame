@@ -1,15 +1,9 @@
 require_relative 'room.rb'
 require_relative 'death.rb'
 require_relative 'person.rb'
+require_relative 'hallway.rb'
 
 class CellRoom < Room
-
-	@@room_description = <<DESCRIPTION
-You are alone in a dark cell.
-The floor and walls are institutional green cinderblock.	
-There is a single metal door and no windows.
-What would you like to do?
-DESCRIPTION
 		
 	def initialize(person)
 		@items = "piece of metal"
@@ -18,10 +12,19 @@ DESCRIPTION
 		@door_help = "Maybe you should open the door..."
 		@current_state_person = person
 		
-		display_description(@@room_description)
+		display_description(cell_description)
 		start()
 	end
 		
+	def cell_description
+	<<END
+You are alone in a dark cell.
+The floor and walls are institutional green cinderblock.	
+There is a single metal door and no windows.
+What would you like to do?
+END
+	 end
+	
 	def start()
 		while true
 			prompt()
@@ -29,7 +32,7 @@ DESCRIPTION
 			if (string_check(action, 'look') or string_check(action, 'search'))
 				puts "You grasp around the dark cell..."
 				puts "You find a #{@items}!"
-				@current_state_person.add_item(@items)
+				#@current_state_person.add_item(@items)
 				return found_metal
 			elsif string_check(action, 'door')
 				puts "You claw at the door, but it is locked tight."
