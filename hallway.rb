@@ -80,6 +80,10 @@ DESCRIPTION
 			action = gets.chomp
 			if string_check(action, 'help')
 				help_request(@room_134_help)
+			elsif string_check(action, 'leave') or string_check(action, 'exit')
+				start()
+			elsif string_check(action, 'look') or string_check(action, 'search')
+				puts "You look around, but find nothing of use."
 			else 
 				puts "You can't do that."
 			end
@@ -87,12 +91,20 @@ DESCRIPTION
 	end
 		
 	def room_130
-		puts @room_134_description
+		puts @room_130_description
 		while true
 			prompt()
 			action = gets.chomp
 			if string_check(action, 'help')
 				help_request(@room_130_help)
+			elsif string_check(action, 'paper')
+				puts "It appears to be a confession of sorts. 
+				It says that he is a traitor and sold state secrets.
+				The heading on the paper says Department of Defense and has an emblem with an eagle on it."		
+			elsif string_check(action, 'body')
+				puts "You search the man. He appears to have been beaten to death. He has nothing on him."
+			elsif string_check(action, 'hallway') or string_check(action, 'leave')
+				start()
 			else 
 				puts "You can't do that."
 			end
