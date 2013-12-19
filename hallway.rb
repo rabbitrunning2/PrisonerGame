@@ -5,6 +5,13 @@ class Hallway < Room
 	def initialize
 		@hallway_help = "You should try one of the doors in the hallway. 
 			Unless you want to go back to your cell and wait for death."
+		@room_134_help = "This is an empty cell. There is nothing for you to do."
+		@room_130_help = "There's a body and a piece of paper, maybe start there?"
+		@locked_door = "The door is locked."
+		@room_134_description = "You open the door and walk into an empty cell."
+		@room_130_description = "You open the door and walk into the cell. 
+		There is a man's body lying on the floor. He looks dead .There is dried blood and bruises all over his body.
+		His clothes are torn. There is a piece of paper by his hand."
 		display_description(description)
 		start()
 	end
@@ -66,18 +73,44 @@ DESCRIPTION
 	end
 	
 	def room_133
+		puts @locked_door
+		start()
 	end
 	
 	def room_134
+		puts @room_134_description
+		while true
+			prompt()
+			action = gets.chomp
+			if string_check(action, 'help')
+				help_request(@room_134_help)
+			else 
+				puts "You can't do that."
+			end
+		end
 	end
 	
 	def room_135
+		puts @locked_door
+		start()
 	end
 	
 	def room_131
+		puts @locked_door
+		start()
 	end
 	
 	def room_130
+		puts @room_134_description
+		while true
+			prompt()
+			action = gets.chomp
+			if string_check(action, 'help')
+				help_request(@room_130_help)
+			else 
+				puts "You can't do that."
+			end
+		end
 	end
 	
 	def right_end_door
