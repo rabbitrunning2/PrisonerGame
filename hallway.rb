@@ -54,14 +54,10 @@ DESCRIPTION
 			left_end_door
 		elsif string_check(action, '130')
 			room_130
-		elsif string_check(action, '131')
-			room_131
-		elsif string_check(action, '133')
-			room_133
+		elsif string_check(action, '131') or string_check(action, '133') or string_check(action, '135')
+			locked_door
 		elsif string_check(action, '134')
 			room_134
-		elsif string_check(action, '135')
-			room_135
 		elsif string_check(action, '132')
 			puts "Yeah, why bother trying to escape."
 			puts "You go back to your cell and lie down."
@@ -72,10 +68,10 @@ DESCRIPTION
 		end
 	end
 	
-	def room_133
+	def locked_door
 		puts @locked_door
 		start()
-	end
+	end	
 	
 	def room_134
 		puts @room_134_description
@@ -89,17 +85,7 @@ DESCRIPTION
 			end
 		end
 	end
-	
-	def room_135
-		puts @locked_door
-		start()
-	end
-	
-	def room_131
-		puts @locked_door
-		start()
-	end
-	
+		
 	def room_130
 		puts @room_134_description
 		while true
