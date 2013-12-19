@@ -16,4 +16,3 @@ class Item
 	
 end
 
-sword = Item.new("Long Sword", (2..10), 'weapon').print_result

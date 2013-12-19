@@ -8,10 +8,10 @@ class Beginning
 	Let's start by making your character...
 DESCRIPTION
 
-	def start()
+	def initialize()
 		puts @@introduction
 		new_character = Person.new
-		first_room = CellRoom.new
+		first_room = CellRoom.new(new_character)
 	end
 	
 end

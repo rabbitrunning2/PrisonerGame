@@ -51,5 +51,3 @@ class Person < Character
 	end
 	
 end
-
-Person.new

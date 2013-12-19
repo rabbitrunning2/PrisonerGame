@@ -29,9 +29,3 @@ class Fight
 	
 end
 
-tom = Person.new
-guard = NPC.new("Guard")
-attack = Fight.new(tom, guard)
-puts tom.get_hit_points
-attack.round(tom, (1..5))
-puts tom.get_hit_points

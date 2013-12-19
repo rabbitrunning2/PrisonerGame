@@ -5,12 +5,11 @@ require_relative 'hallway.rb'
 
 class CellRoom < Room
 		
-	def initialize(person)
+	def initialize()
 		@items = "piece of metal"
 		@start_help = "Try looking around..."
 		@metal_help = "Maybe you could use the metal to pick the lock?"
 		@door_help = "Maybe you should open the door..."
-		@current_state_person = person
 		
 		display_description(cell_description)
 		start()
@@ -32,7 +31,7 @@ END
 			if (string_check(action, 'look') or string_check(action, 'search'))
 				puts "You grasp around the dark cell..."
 				puts "You find a #{@items}!"
-				#@current_state_person.add_item(@items)
+
 				return found_metal
 			elsif string_check(action, 'door')
 				puts "You claw at the door, but it is locked tight."
@@ -100,5 +99,3 @@ END
 	end
 	
 end
-
-CellRoom.new(Person.new)
