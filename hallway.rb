@@ -30,13 +30,15 @@ DESCRIPTION
 				two larger doors to your right and to your left."
 		elsif string_check(action, 'open') and string_check(action, 'door')
 			door_choice()
+		
 		else
 			puts "You can't do that."
 		end
 	
 	end
+	
 	def door_choice
-		puts "What door do you want to open?"
+		puts "Which door do you want to open?"
 		if string_check(action, 'help')
 			help_request(@hallway_help)
 		elsif string_check(action, 'right')
