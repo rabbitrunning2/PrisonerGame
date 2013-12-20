@@ -1,4 +1,7 @@
+#Parent class for rooms
+#
 class Room
+#TODO arrays for general actions that are used in each room.
 
 	def initialize()
 		super()
@@ -18,7 +21,8 @@ class Room
 			return false
 		end
 	end
-	
+
+#TODO set up method to search user input for array of 'actions'.
 	def string_array_check(array, word)
 		i = 0
 		while i < array.length

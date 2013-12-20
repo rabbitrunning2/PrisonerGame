@@ -1,8 +1,11 @@
 require_relative 'room.rb'
+#This is the second room.
+
 require_relative 'death.rb'
 	
 class Hallway < Room
-	
+	#Added help messages. 
+	#TODO These can be moved later to the general message class, if I make it.
 	def initialize
 		@hallway_help = "You should try one of the doors in the hallway. 
 			Unless you want to go back to your cell and wait for death."
@@ -118,10 +121,10 @@ DESCRIPTION
 			end
 		end
 	end
-	
+	#TODO fill code to next room - holding room
 	def right_end_door
 	end
-	
+	#TODO fill in code for next room. -next hallway
 	def left_end_door
 	end
 	

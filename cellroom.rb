@@ -1,3 +1,6 @@
+#This si the first room the game begins in
+#Child of Room class.
+
 require_relative 'room.rb'
 require_relative 'death.rb'
 require_relative 'person.rb'

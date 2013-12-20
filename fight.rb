@@ -1,3 +1,8 @@
+#This is the first working draft of a fight round
+#not fully formed.
+#On hold until game path of rooms and choices is complete.
+#TODO complete it.
+
 require_relative 'npc.rb'
 require_relative 'person.rb'
 

@@ -1,3 +1,7 @@
+#This is the class for the mina character.
+#Child of Character class
+#TODO set up inventory to follow character around.
+
 require_relative 'character.rb'
 
 class Person < Character

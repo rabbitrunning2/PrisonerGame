@@ -1,3 +1,6 @@
+#This is a genreal class to make NPCs
+#Child of Character.
+
 require_relative 'character.rb'
 
 class NPC < Character

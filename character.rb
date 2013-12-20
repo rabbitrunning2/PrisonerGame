@@ -1,3 +1,6 @@
+#This is the base class for creating characters, either the main player or NPCs
+#It contains getters and setters for the instance variables.
+
 class Character
 	@name
 	@strength
@@ -63,6 +66,7 @@ class Character
 			raise "No value for consitution to compute hit points!"
 		end
 	end
+	#TODO make inventory work properly.
 	def add_item(item)
 		@inventory.push(item)
 	end

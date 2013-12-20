@@ -1,3 +1,8 @@
+#This is a general class to use for creating items
+#It is not fully formed yet.
+#It should create and instance of an item 
+#and save that instance in the character inventory.
+
 class Item
 
 	def initialize(name, damage, classification)
