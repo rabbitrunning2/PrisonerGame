@@ -1,4 +1,4 @@
-#This si the first room the game begins in
+#This is the first room the game begins in
 #Child of Room class.
 
 require_relative 'room.rb'
