@@ -39,6 +39,6 @@ class Room
 	end
 	
 	def get_look
-		@look_commands
+		@look_cdcommands
 	end
 end
