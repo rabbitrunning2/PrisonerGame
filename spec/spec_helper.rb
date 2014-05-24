@@ -1,0 +1,5 @@
+require_relative '../room.rb'
+require_relative '../cellroom.rb'
+require_relative '../room131.rb'
+require_relative '../room133.rb'
+require_relative '../room134.rb'
