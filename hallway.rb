@@ -108,7 +108,7 @@ DESCRIPTION
 			end
 		end
 	end
-	#TODO fill code to next hallway
+
 	def room_132
 	end
 	def room_133
@@ -135,6 +135,7 @@ DESCRIPTION
 		end
 	end
 	
+	#TODO fill in code for next hallway
 	def right_end_door
 	end
 	#TODO fill in code for next hallway
