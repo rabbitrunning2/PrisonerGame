@@ -12,7 +12,6 @@ class Hallway < Room
 		@room_136_help = "This is an empty cell. There is nothing for you to do."
 		@room_131_help = "There's a body and a piece of paper, maybe start there?"
 		@locked_door = "The door is locked."
-		@room_136_description = "You open the door and walk into an empty cell."
 		display_description(hallway_description)
 		start()
 	end
@@ -31,6 +30,18 @@ DESCRIPTION
 	You open the door and walk into the cell. 
 	There is a man's body lying on the floor. He looks dead .There is dried blood and bruises all over his body.
 	His clothes are torn. There is a piece of paper by his hand.
+DESCRIPTION
+	end
+	
+	def room_133_description
+	end
+	def room_134_description
+	end
+	def room_135_description
+	end
+	def room_136_description
+	<<DESCRIPTION
+	You open the door and walk into an empty cell.
 DESCRIPTION
 	end
 	
@@ -118,7 +129,7 @@ DESCRIPTION
 	def room_135
 	end
 	def room_136
-		puts @room_136_description
+		puts room_136_description
 		while true
 			prompt()
 			action = gets.chomp
