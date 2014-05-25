@@ -2,21 +2,20 @@
 #It prints out the game description
 #It initializes the creation of a character and starts the fist room.
 
-require_relative 'person.rb'
+#require_relative 'person.rb'
 require_relative 'cellroom.rb'
 
 class Main
 
 	@@introduction = <<DESCRIPTION
 	Welcome to PRISONER - a text-based game by Ryan Esber
-	Let's start by making your character...
 DESCRIPTION
 
 #TODO calls returned new room form here
 
 	def initialize()
 		puts @@introduction
-		Person.new
+		#Person.new
 		first_room = CellRoom.new()
 	end
 end

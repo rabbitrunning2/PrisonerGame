@@ -1,0 +1,10 @@
+Room class
+it has:
+	descriptions
+	choices
+	items
+it does:
+	display descriptions
+	make choices
+	take input
+	
