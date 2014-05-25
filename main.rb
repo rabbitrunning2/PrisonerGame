@@ -4,6 +4,7 @@
 
 #require_relative 'person.rb'
 require_relative 'cellroom.rb'
+require_relative 'room_driver.rb'
 
 class Main
 
@@ -16,7 +17,8 @@ DESCRIPTION
 	def initialize()
 		puts @@introduction
 		#Person.new
-		first_room = CellRoom.new()
+		#first_room = CellRoom.new()
+		new_room = RoomDriver.new("room132", "key", "You are in a room")
 	end
 end
 

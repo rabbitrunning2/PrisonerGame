@@ -3,7 +3,7 @@
 class Room
 #TODO arrays for general actions that are used in each room.
 # add name, items, description to init.
-	def initialize()
+	def initialize(name, items, description)
 		super()
 		@items = nil
 		@look_commands = ['look', 'search']

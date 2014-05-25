@@ -1,6 +1,10 @@
 require_relative 'room.rb'
 
-class RoomDriver
-	def initialize
+class RoomDriver < Room
+
+	def initialize(name, items, description)
+		@name = name
+		@items = items
+		display_description(description)
 	end
 end
