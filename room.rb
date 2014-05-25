@@ -34,6 +34,13 @@ class Room
 		puts description
 	end
 	
+	def start
+		while true
+			prompt()
+			action = gets.chomp
+		end
+	end
+
 	def help_request(help_message)
 		puts help_message
 	end

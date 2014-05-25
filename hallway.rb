@@ -37,7 +37,7 @@ DESCRIPTION
 			if string_check(action, 'help')
 				help_request(@hallway_help)
 			elsif string_check(action, 'look') or string_check(action, 'search')
-				puts "There are five doors numbered: 130, 131, 133, 134, 135," 
+				puts "There are five doors numbered: 131, 133, 134, 135, 136," 
 				puts "two larger doors: one to your right and one to your left."
 			elsif string_check(action, 'open') and string_check(action, 'door')
 				door_choice
@@ -121,10 +121,10 @@ DESCRIPTION
 			end
 		end
 	end
-	#TODO fill code to next room - holding room
+	#TODO fill code to next hallway
 	def right_end_door
 	end
-	#TODO fill in code for next room. -next hallway
+	#TODO fill in code for next hallway
 	def left_end_door
 	end
 	

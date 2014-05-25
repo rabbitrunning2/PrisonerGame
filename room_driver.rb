@@ -7,4 +7,6 @@ class RoomDriver < Room
 		@items = items
 		display_description(description)
 	end
+	
+	
 end
