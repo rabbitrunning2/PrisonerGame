@@ -9,5 +9,6 @@ describe CellRoom do
 The floor and walls are institutional green cinderblock.	
 There is a single metal door and no windows.
 What would you like to do?"
+	room.should_receive
 	end
 end
