@@ -2,7 +2,7 @@
 #
 class Room
 #TODO arrays for general actions that are used in each room.
-
+# add name, items, description to init.
 	def initialize()
 		super()
 		@items = nil
