@@ -11,6 +11,7 @@ class Hallway < Room
 			Unless you want to go back to your cell and wait for death."
 		@room_136_help = "This is an empty cell. There is nothing for you to do."
 		@room_131_help = "There's a body and a piece of paper, maybe start there?"
+		@room_133_help = "This is an empty cell. There is nothing for you to do."
 		@locked_door = "The door is locked."
 		display_description(hallway_description)
 		start()
@@ -28,12 +29,17 @@ DESCRIPTION
 	def room_131_description
 	<<DESCRIPTION
 	You open the door and walk into the cell. 
-	There is a man's body lying on the floor. He looks dead .There is dried blood and bruises all over his body.
+	There is a man's body lying on the floor. He looks dead. 
+	There is dried blood and bruises all over his body.
 	His clothes are torn. There is a piece of paper by his hand.
 DESCRIPTION
 	end
 	
 	def room_133_description
+		<<DESCRIPTION
+	You open the door and walk into the cell. 
+	There is no one in here. 
+DESCRIPTION
 	end
 	def room_134_description
 	end
@@ -78,7 +84,9 @@ DESCRIPTION
 				left_end_door
 			elsif string_check(action, '131')
 				room_131
-			elsif string_check(action, '133') or string_check(action, '134') or string_check(action, '135')
+			elsif string_check(action, '133')
+				room_133
+			elsif string_check(action, '134') or string_check(action, '135')
 				locked_door
 			elsif string_check(action, '136')
 				room_136
@@ -108,7 +116,7 @@ DESCRIPTION
 			elsif string_check(action, 'paper')
 				puts "It appears to be a confession of sorts." 
 				puts "It says that he is a traitor and sold state secrets."
-				puts "The heading on the paper says Department of Defense and has an emblem with an eagle on it."		
+				puts "The heading on the paper says D.O.D. and has an emblem with an eagle on it."		
 			elsif string_check(action, 'body')
 				puts "You search the man. He appears to have been beaten to death. He has nothing on him."
 			elsif string_check(action, 'hallway') or string_check(action, 'leave')
@@ -119,15 +127,26 @@ DESCRIPTION
 			end
 		end
 	end
-
-	def room_132
-	end
+	
 	def room_133
+		puts room_133_description
+		while true
+			prompt()
+			action = gets.chomp
+			if string_check(action, 'help')
+				help_request(@room_133_help)
+			elsif string_check(action, 'hallway') or string_check(action, 'leave')
+				puts "You are back in the hallway."
+				start()
+		end
 	end
+	
 	def room_134
 	end
+	
 	def room_135
 	end
+	
 	def room_136
 		puts room_136_description
 		while true
