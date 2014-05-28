@@ -23,8 +23,10 @@ class Room
 	end
 	#Mock up of global door_choice or rooms
 	def door_choice(action, hash)
-		if string_check(action, key)
-			value
+		hash.each do |key, value|
+			if string_check(action, key)
+				value
+			end
 		end
 	end
 #TODO set up method to search user input for array of 'actions'.
