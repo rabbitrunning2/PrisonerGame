@@ -21,7 +21,7 @@ class Hallway < Room
 	def hallway_description
 	<<DESCRIPTION
 You walk out into a corridor.
-There are about five other doors along the hallway. Each door is numbered.
+There are about five other doors along the hallway. Each door is numbered:131, 133, 134, 135, 136.
 You look back and see your cell was #132.
 There are two larger doors to the right and left at either end of the hallway.
 DESCRIPTION
@@ -37,9 +37,9 @@ DESCRIPTION
 	end
 	
 	def room_133_description
-		<<DESCRIPTION
-	You open the door and walk into the cell. 
-	There is no one in here. 
+	<<DESCRIPTION
+You open the door and walk into the cell. 
+There is no one in here. 
 DESCRIPTION
 	end
 	
