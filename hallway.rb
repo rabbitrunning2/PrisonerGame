@@ -1,6 +1,7 @@
 require_relative 'room.rb'
 #This is the second Hallway.
-
+require_relative 'hallway_two.rb'
+require_relative 'hallway_three.rb'
 require_relative 'death.rb'
 	
 class Hallway < Room
@@ -196,6 +197,7 @@ DESCRIPTION
 	
 	#TODO fill in code for next hallway
 	def right_end_door
+		Hallway_Two
 	end
 	#TODO fill in code for next hallway
 	def left_end_door
