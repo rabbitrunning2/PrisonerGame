@@ -1,5 +1,5 @@
 require_relative 'room.rb'
-#This is the second room.
+#This is the second Hallway.
 
 require_relative 'death.rb'
 	
