@@ -8,7 +8,8 @@ require_relative 'room_driver.rb'
 
 class Main
 
-	@@introduction = <<DESCRIPTION
+	@@introduction = 
+	<<DESCRIPTION
 	Welcome to PRISONER - a text-based game by Ryan Esber
 DESCRIPTION
 

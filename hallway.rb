@@ -153,6 +153,7 @@ DESCRIPTION
 			elsif string_check(action, 'hallway') or string_check(action, 'leave')
 				puts "You are back in the hallway."
 				start()
+			end
 		end
 	end
 	
