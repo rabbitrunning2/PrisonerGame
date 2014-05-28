@@ -1,4 +1,7 @@
 #This is the Class for the '40's' Hallway.
+require_relative 'room.rb'
+require_relative 'hallway.rb'
+require_relative 'hallway_four.rb'
 
 class Hallway_Two < Room
 	
