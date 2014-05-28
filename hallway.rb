@@ -169,6 +169,11 @@ DESCRIPTION
 	end
 	
 	def room_135
+		puts room_135_description
+		while true
+			prompt()
+			action = gets.chomp
+		end
 	end
 	
 	def room_136
