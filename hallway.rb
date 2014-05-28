@@ -167,6 +167,7 @@ DESCRIPTION
 			elsif string_check(action, 'hallway') or string_check(action, 'leave')
 				puts "You are back in the hallway."
 				start()
+			end
 		end
 	end
 	
@@ -198,7 +199,7 @@ DESCRIPTION
 	
 	#TODO fill in code for next hallway
 	def right_end_door
-		Hallway_Two
+		# Hallway_Two
 	end
 	#TODO fill in code for next hallway
 	def left_end_door
