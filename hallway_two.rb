@@ -32,6 +32,8 @@ DESCRIPTION
 	
 	def start()
 	end
+	def door_choice
+	end
 	
 	def room_141
 	end

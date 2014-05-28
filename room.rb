@@ -21,7 +21,12 @@ class Room
 			return false
 		end
 	end
-
+	#Mock up of global door_choice or rooms
+	def door_choice(action, hash)
+		if string_check(action, key)
+			value
+		end
+	end
 #TODO set up method to search user input for array of 'actions'.
 	def string_array_check(array, word)
 		i = 0
