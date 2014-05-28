@@ -41,8 +41,16 @@ DESCRIPTION
 	There is no one in here. 
 DESCRIPTION
 	end
+	
 	def room_134_description
+	<<DESCRIPTION
+	You open the door and walk into the cell. 
+	There is an odd smell, like burnt rubber.
+	You look around and see a pair of cuffs on the floor
+	and a tattered blanket.  
+DESCRIPTION
 	end
+	
 	def room_135_description
 	end
 	def room_136_description
