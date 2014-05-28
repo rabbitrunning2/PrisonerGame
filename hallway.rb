@@ -52,6 +52,10 @@ DESCRIPTION
 	end
 	
 	def room_135_description
+	<<DESCRIPTION
+	You open the door and walk into the cell. 
+	There is no one in here. 
+DESCRIPTION
 	end
 	def room_136_description
 	<<DESCRIPTION
@@ -94,7 +98,9 @@ DESCRIPTION
 				room_131
 			elsif string_check(action, '133')
 				room_133
-			elsif string_check(action, '134') or string_check(action, '135')
+			elsif string_check(action, '134')
+				room_134 
+			elsif string_check(action, '135')
 				locked_door
 			elsif string_check(action, '136')
 				room_136
@@ -150,6 +156,16 @@ DESCRIPTION
 	end
 	
 	def room_134
+		puts room_134_description
+		while true
+			prompt()
+			action = gets.chomp
+			if string_check(action, 'help')
+				help_request(@room_134_help)
+			elsif string_check(action, 'hallway') or string_check(action, 'leave')
+				puts "You are back in the hallway."
+				start()
+		end
 	end
 	
 	def room_135
