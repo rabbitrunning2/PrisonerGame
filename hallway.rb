@@ -9,7 +9,7 @@ class Hallway < Room
 	#TODO These can be moved later to the general message class, if I make it.
 	def initialize
 		@hallway_help = "You should try one of the doors in the hallway. 
-			Unless you want to go back to your cell and wait for death."
+Unless you want to go back to your cell and wait for death."
 		@room_136_help = "This is an empty cell. There is nothing for you to do."
 		@room_131_help = "There's a body and a piece of paper, maybe start there?"
 		@room_133_help = "This is an empty cell. There is nothing for you to do."
