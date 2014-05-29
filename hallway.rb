@@ -211,7 +211,7 @@ DESCRIPTION
 	
 	#TODO fill in code for next hallway
 	def right_end_door
-		# Hallway_Two
+		Hallway_Two
 	end
 	#TODO fill in code for next hallway
 	def left_end_door
