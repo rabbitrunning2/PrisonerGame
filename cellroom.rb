@@ -32,8 +32,9 @@ END
 			prompt()
 			action = gets.chomp
 			quit_game(action)
-			help_check(action, @start_help)
-			if (string_check(action, 'look') or string_check(action, 'search'))
+			if string_check(action, 'help')
+				help_request(@start_help)
+			elsif (string_check(action, 'look') or string_check(action, 'search'))
 				puts "You grasp around the dark cell..."
 				puts "You find a #{@items}!"
 				found_metal

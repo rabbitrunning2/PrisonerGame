@@ -74,10 +74,10 @@ DESCRIPTION
 			elsif string_check(action, 'look') or string_check(action, 'search')
 				puts "There are five doors numbered: 131, 133, 134, 135, 136,"
 				puts "and your old cell in room 132."
-				puts "two larger doors: one to your right and one to your left."
+				puts "There are also two larger doors: one to your right and one to your left."
 			elsif string_check(action, 'open') and string_check(action, 'door')
 				door_choice
-		
+			
 			else
 				puts "You can't do that."
 			end
