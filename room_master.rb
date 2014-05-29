@@ -2,7 +2,9 @@
 #The goal here is to create a class that will be instantiated for each new room.
 
 class RoomMaster
-	def initialize
+	def initialize(name, items)
+		@items = items
+		@room_name = name
 	end
 	
 	def prompt()
@@ -23,5 +25,11 @@ class RoomMaster
 	
 	def help_request(help_message)
 		puts help_message
+	end
+	
+	def universal_action_choice(string, message)
+		if string_check(string, 'help')
+			help_request(message)
+		end
 	end
 end
