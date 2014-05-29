@@ -44,6 +44,12 @@ class Room
 		end
 	end
 	
+	def help_check(action, help_message)
+		if string_check(action, 'help')
+			help_request(help_message)
+			start()
+		end
+	end
 	def display_description(description)
 		puts description
 	end

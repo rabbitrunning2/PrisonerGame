@@ -3,7 +3,7 @@
 
 require_relative 'room.rb'
 require_relative 'death.rb'
-require_relative 'person.rb'
+# require_relative 'person.rb'
 require_relative 'hallway.rb'
 
 class CellRoom < Room
@@ -32,15 +32,15 @@ END
 			prompt()
 			action = gets.chomp
 			quit_game(action)
+			help_check(action, @start_help)
 			if (string_check(action, 'look') or string_check(action, 'search'))
 				puts "You grasp around the dark cell..."
 				puts "You find a #{@items}!"
-
-				return found_metal
+				found_metal
 			elsif string_check(action, 'door')
-				puts "You claw at the door, but it is locked tight."
-			elsif string_check(action, 'help')
-				help_request(@start_help)
+				puts "You try to open the door, but it is locked tight."
+			# elsif string_check(action, 'help')
+				# help_request(@start_help)
 			else
 				puts "You can't do that."
 			end
