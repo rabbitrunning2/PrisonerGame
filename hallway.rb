@@ -5,8 +5,7 @@ require_relative 'hallway_three.rb'
 require_relative 'death.rb'
 	
 class Hallway < Room
-	#Added help messages. 
-	#TODO These can be moved later to the general message class, if I make it.
+	#TODO These can be moved later to a general message class, if I make it.
 	def initialize
 		@hallway_help = "You should try one of the doors in the hallway. 
 Unless you want to go back to your cell and wait for death."
@@ -81,6 +80,10 @@ DESCRIPTION
 			elsif string_check(action, 'go')
 				puts "Where do you want to go?"
 				door_choice
+			elsif string_check(action, 'left')
+				left_end_door
+			elsif string_check(action, 'right')
+				right_end_door
 			else
 				puts "You can't do that."
 			end
