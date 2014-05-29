@@ -31,6 +31,7 @@ END
 		while true
 			prompt()
 			action = gets.chomp
+			quit_game(action)
 			if (string_check(action, 'look') or string_check(action, 'search'))
 				puts "You grasp around the dark cell..."
 				puts "You find a #{@items}!"
@@ -50,6 +51,7 @@ END
 		while true
 			prompt()
 			action = gets.chomp
+			quit_game(action)
 			if string_check(action, 'help')
 				help_request(@metal_help)
 			elsif string_check(action, 'pick') and string_check(action, 'lock')
@@ -70,6 +72,7 @@ END
 		while true
 			prompt()
 			action = gets.chomp
+			quit_game(action)
 			if string_check(action, 'open') and string_check(action, 'door')
 				return Hallway.new
 			elsif string_check(action, 'help')
@@ -86,6 +89,7 @@ END
 		while true
 			prompt()
 			action = gets.chomp
+			quit_game(action)
 			if string_check(action, 'door') or string_check(action, 'lock')
 				puts "You slide the metal into the small opening. You hands move like you have done this before..."
 				puts "You feel the door unlock."

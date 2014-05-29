@@ -68,7 +68,7 @@ DESCRIPTION
 		while true
 			prompt()
 			action = gets.chomp
-			
+			quit_game(action)
 			if string_check(action, 'help')
 				help_request(@hallway_help)
 			elsif string_check(action, 'look') or string_check(action, 'search')
@@ -90,6 +90,7 @@ DESCRIPTION
 		while true
 			prompt()
 			action = gets.chomp
+			quit_game(action)
 			if string_check(action, 'help')
 				help_request(@hallway_help)
 			elsif string_check(action, 'right')
@@ -127,6 +128,7 @@ DESCRIPTION
 		while true
 			prompt()
 			action = gets.chomp
+			quit_game(action)
 			if string_check(action, 'help')
 				help_request(@room_131_help)
 			elsif string_check(action, 'paper')
@@ -149,6 +151,7 @@ DESCRIPTION
 		while true
 			prompt()
 			action = gets.chomp
+			quit_game(action)
 			if string_check(action, 'help')
 				help_request(@room_133_help)
 			elsif string_check(action, 'hallway') or string_check(action, 'leave')
@@ -163,6 +166,7 @@ DESCRIPTION
 		while true
 			prompt()
 			action = gets.chomp
+			quit_game(action)
 			if string_check(action, 'help')
 				help_request(@room_134_help)
 			elsif string_check(action, 'hallway') or string_check(action, 'leave')
@@ -185,6 +189,7 @@ DESCRIPTION
 		while true
 			prompt()
 			action = gets.chomp
+			quit_game(action)
 			if string_check(action, 'help')
 				help_request(@room_136_help)
 			elsif string_check(action, 'leave') or string_check(action, 'exit')

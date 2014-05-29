@@ -37,6 +37,13 @@ class Room
 		end
 	end
 	
+	def quit_game(action)
+		if string_check(action, 'quit') or string_check(action, 'q')
+			puts "Ok. Goodbye!"
+			Process.exit(0)
+		end
+	end
+	
 	def display_description(description)
 		puts description
 	end
