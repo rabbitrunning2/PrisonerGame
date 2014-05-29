@@ -39,10 +39,8 @@ END
 				found_metal
 			elsif string_check(action, 'door')
 				puts "You try to open the door, but it is locked tight."
-			# elsif string_check(action, 'help')
-				# help_request(@start_help)
 			else
-				puts "You can't do that."
+				puts "That doesn't help."
 			end
 		end
 	end
