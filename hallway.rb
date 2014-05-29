@@ -29,10 +29,10 @@ DESCRIPTION
 	
 	def room_131_description
 	<<DESCRIPTION
-	You open the door and walk into the cell. 
-	There is a man's body lying on the floor. He looks dead. 
-	There is dried blood and bruises all over his body.
-	His clothes are torn. There is a piece of paper by his hand.
+You open the door and walk into the cell. 
+There is a man's body lying on the floor. He looks dead. 
+There is dried blood and bruises all over his body.
+His clothes are torn. There is a piece of paper by his hand.
 DESCRIPTION
 	end
 	
@@ -45,22 +45,22 @@ DESCRIPTION
 	
 	def room_134_description
 	<<DESCRIPTION
-	You open the door and walk into the cell. 
-	There is an odd smell, like burnt rubber.
-	You look around and see a pair of cuffs on the floor
-	and a tattered blanket.  
+You open the door and walk into the cell. 
+There is an odd smell, like burnt rubber.
+You look around and see a pair of cuffs on the floor
+and a tattered blanket.  
 DESCRIPTION
 	end
 	
 	def room_135_description
 	<<DESCRIPTION
-	You open the door and walk into the cell. 
-	There is no one in here. 
+You open the door and walk into the cell. 
+There is no one in here. 
 DESCRIPTION
 	end
 	def room_136_description
 	<<DESCRIPTION
-	You open the door and walk into an empty cell.
+You open the door and walk into an empty cell.
 DESCRIPTION
 	end
 	
@@ -76,8 +76,11 @@ DESCRIPTION
 				puts "and your old cell in room 132."
 				puts "There are also two larger doors: one to your right and one to your left."
 			elsif string_check(action, 'open') and string_check(action, 'door')
+				puts "Which door do you want to open?"
 				door_choice
-			
+			elsif string_check(action, 'go')
+				puts "Where do you want to go?"
+				door_choice
 			else
 				puts "You can't do that."
 			end
@@ -86,7 +89,6 @@ DESCRIPTION
 	end
 	
 	def door_choice
-		puts "Which door do you want to open?"
 		while true
 			prompt()
 			action = gets.chomp
