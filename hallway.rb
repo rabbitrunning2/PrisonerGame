@@ -186,6 +186,7 @@ DESCRIPTION
 		while true
 			prompt()
 			action = gets.chomp
+			quit_game(action)
 		end
 	end
 	
