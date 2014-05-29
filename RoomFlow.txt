@@ -1,0 +1,9 @@
+Room flow
+1. displays description of room.
+2. prompts User for input
+3. takes in input and checks for available actions
+	checks to see if User wants to quit
+	checks to see if User wants help
+	checks to see if User has looked or searched room.
+returns appropriate result
+returns new Room.
