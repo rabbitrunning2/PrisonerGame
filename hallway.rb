@@ -57,6 +57,7 @@ You open the door and walk into the cell.
 There is no one in here. 
 DESCRIPTION
 	end
+	
 	def room_136_description
 	<<DESCRIPTION
 You open the door and walk into an empty cell.
@@ -80,6 +81,8 @@ DESCRIPTION
 			elsif string_check(action, 'go')
 				puts "Where do you want to go?"
 				door_choice
+			elsif string_check(action, 'pick') and string_check(action, 'lock')
+				lock_pick
 			elsif string_check(action, 'left')
 				left_end_door
 			elsif string_check(action, 'right')
@@ -119,6 +122,18 @@ DESCRIPTION
 				Death.new
 			else 
 				puts "You can't do that."
+			end
+		end
+	end
+	
+	def lock_pick
+		puts "which door do you want to pick?"
+		while true
+			prompt()
+			action = gets.chomp
+			quit_game(action)
+			if string_check(action, '135')
+				#code for picking a lock.
 			end
 		end
 	end
